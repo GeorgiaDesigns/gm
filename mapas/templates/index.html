@@ -1,0 +1,35 @@
+{% load static %}
+
+<html>
+  <head>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/css/ol.css" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <script src="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/build/ol.js"></script>
+    <script src="{% static 'scripts/script.js'%}"></script>
+    <title>OpenLayers example</title>
+  </head>
+  <body>
+
+    <div class="menu_box">
+      <i class="fa fa-bars"></i>
+    </div>
+
+    <div class="map">
+
+      <!--  <button class="js-menu menu" type="button">
+            <span class="bar"></span>
+        </button>   -->
+
+        <nav>
+          <input type="checkbox" class="option checkbox" checked/>
+            Cor<br/>
+          <input type="checkbox" class="option checkbox" />
+            Classe<br/>
+          <input type="checkbox" class="option checkbox" />
+            Gênero <br/>
+        </nav>
+    </div>
+
+  </body>
+</html>
