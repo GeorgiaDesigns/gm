@@ -19,16 +19,6 @@ class EscolasParticualresSp(models.Model):
     gid = models.AutoField(primary_key=True)
     geom = models.MultiPointField(dim=3, blank=True, null=True)
     name = models.CharField(max_length=254, blank=True, null=True)
-    descriptio = models.CharField(max_length=254, blank=True, null=True)
-    timestamp = models.CharField(max_length=24, blank=True, null=True)
-    begin = models.CharField(max_length=24, blank=True, null=True)
-    end = models.CharField(max_length=24, blank=True, null=True)
-    altitudemo = models.CharField(max_length=254, blank=True, null=True)
-    tessellate = models.BigIntegerField(blank=True, null=True)
-    extrude = models.BigIntegerField(blank=True, null=True)
-    visibility = models.BigIntegerField(blank=True, null=True)
-    draworder = models.BigIntegerField(blank=True, null=True)
-    icon = models.CharField(max_length=254, blank=True, null=True)
     cnpj = models.CharField(max_length=254, blank=True, null=True)
     nome_fanta = models.CharField(max_length=254, blank=True, null=True)
     data_abert = models.CharField(max_length=254, blank=True, null=True)
@@ -65,19 +55,9 @@ class EscolasParticualresSp(models.Model):
 
 class RestaurantesCampinas(models.Model):
     gid = models.AutoField(primary_key=True)
-    geom = models.MultiPointField(dim=3, blank=True, null=True)
     name = models.CharField(max_length=254, blank=True, null=True)
-    descriptio = models.CharField(max_length=254, blank=True, null=True)
-    timestamp = models.CharField(max_length=24, blank=True, null=True)
-    begin = models.CharField(max_length=24, blank=True, null=True)
-    end = models.CharField(max_length=24, blank=True, null=True)
-    altitudemo = models.CharField(max_length=254, blank=True, null=True)
-    tessellate = models.BigIntegerField(blank=True, null=True)
-    extrude = models.BigIntegerField(blank=True, null=True)
-    visibility = models.BigIntegerField(blank=True, null=True)
-    draworder = models.BigIntegerField(blank=True, null=True)
-    icon = models.CharField(max_length=254, blank=True, null=True)
-    snippet = models.CharField(max_length=254, blank=True, null=True)
+    description = models.CharField(max_length=254, blank=True, null=True)
+    geom = models.MultiPointField(blank=True, null=True)
 
     class Meta:
         managed = False
@@ -107,9 +87,43 @@ class SociodemografiaRmc(models.Model):
     shape_area = models.FloatField(blank=True, null=True)
     densid_dem = models.FloatField(blank=True, null=True)
 
-    # def __str__(self):
-    #     return self
-
     class Meta:
         managed = False
         db_table = 'sociodemografia_rmc'
+
+
+class FarmaciasRmc(models.Model):
+    gid = models.AutoField(primary_key=True)
+    geom = models.MultiPointField(dim=3, blank=True, null=True)
+    name = models.CharField(max_length=254, blank=True, null=True)
+    cnpj = models.CharField(max_length=254, blank=True, null=True)
+    nomefantas = models.CharField(max_length=254, blank=True, null=True)
+    endereco = models.CharField(max_length=254, blank=True, null=True)
+    bairro = models.CharField(max_length=254, blank=True, null=True)
+    numero = models.CharField(max_length=254, blank=True, null=True)
+    complement = models.CharField(max_length=254, blank=True, null=True)
+    cep = models.CharField(max_length=254, blank=True, null=True)
+    datasituac = models.CharField(max_length=254, blank=True, null=True)
+    situacaoca = models.CharField(max_length=254, blank=True, null=True)
+    dataabertu = models.CharField(max_length=254, blank=True, null=True)
+    regulament = models.CharField(max_length=254, blank=True, null=True)
+    natureza = models.CharField(max_length=254, blank=True, null=True)
+    cnae = models.CharField(max_length=254, blank=True, null=True)
+    setor = models.CharField(max_length=254, blank=True, null=True)
+    cidade = models.CharField(max_length=254, blank=True, null=True)
+    estado = models.CharField(max_length=254, blank=True, null=True)
+    regiao = models.CharField(max_length=254, blank=True, null=True)
+    idade = models.CharField(max_length=254, blank=True, null=True)
+    simplesnac = models.CharField(max_length=254, blank=True, null=True)
+    inscricaoe = models.CharField(max_length=254, blank=True, null=True)
+    cnaesecund = models.CharField(max_length=254, blank=True, null=True)
+    cnaesecu_1 = models.CharField(max_length=254, blank=True, null=True)
+    cnaesecu_2 = models.CharField(max_length=254, blank=True, null=True)
+    cnaesecu_3 = models.CharField(max_length=254, blank=True, null=True)
+    cnaesecu_4 = models.CharField(max_length=254, blank=True, null=True)
+    cnaesecu_5 = models.CharField(max_length=254, blank=True, null=True)
+    cnaesecu_6 = models.CharField(max_length=254, blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'farmacias_rmc'
