@@ -17,11 +17,12 @@ class RMC_Serializer(serializers.ModelSerializer):
 class Restaurantes_Serializer(serializers.ModelSerializer):
     class Meta:
         model = RestaurantesCampinas
-        # fields = ('gid', 'name', 'geom')
+        #
         fields = '__all__'
 
 
 class Farmacia_Serializer(serializers.ModelSerializer):
     class Meta:
         model = FarmaciasRmc
+        # fields = ('gid', 'name')
         fields = '__all__'

@@ -94,7 +94,6 @@ class SociodemografiaRmc(models.Model):
 
 class FarmaciasRmc(models.Model):
     gid = models.AutoField(primary_key=True)
-    geom = models.MultiPointField(dim=3, blank=True, null=True)
     name = models.CharField(max_length=254, blank=True, null=True)
     cnpj = models.CharField(max_length=254, blank=True, null=True)
     nomefantas = models.CharField(max_length=254, blank=True, null=True)
@@ -122,8 +121,10 @@ class FarmaciasRmc(models.Model):
     cnaesecu_3 = models.CharField(max_length=254, blank=True, null=True)
     cnaesecu_4 = models.CharField(max_length=254, blank=True, null=True)
     cnaesecu_5 = models.CharField(max_length=254, blank=True, null=True)
-    cnaesecu_6 = models.CharField(max_length=254, blank=True, null=True)
+    cnaesecu_6 = models.CharField(max_length=254, blank=True)
+    geom = models.MultiPointField(blank=True, null=True)
 
     class Meta:
         managed = False
         db_table = 'farmacias_rmc'
+
