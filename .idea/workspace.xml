@@ -2,17 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e682e278-040a-4958-a6ec-6ba212a66708" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/geomeridium.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pontosMultidrogas/serializers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pontosMultidrogas/static/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pontosMultidrogas/static/scripts/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pontosMultidrogas/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pontosMultidrogas/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SF/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/SF/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SF/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/SF/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mapas/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/mapas/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mapas/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/mapas/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mapas/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/mapas/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mapas/static/css/styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mapas/static/scripts/script.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mapas/templates/base.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mapas/templates/hello_django.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mapas/templates/index.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/mapas/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mapas/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,43 +17,6 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/mapas/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="321">
-              <caret line="39" column="17" lean-forward="true" selection-start-line="39" selection-start-column="17" selection-end-line="39" selection-end-column="17" />
-              <folding>
-                <element signature="e#0#48#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mapas/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-162">
-              <caret line="68" column="8" selection-start-line="68" selection-start-column="8" selection-end-line="68" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SF/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="22" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="22" />
-              <folding>
-                <element signature="e#0#32#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -68,97 +28,17 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/mapas/migrations/serializers.py" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/mapas/migrations/urls.py" />
-        <option value="$PROJECT_DIR$/mapas/Pages/index.html" />
-        <option value="$PROJECT_DIR$/mapas/index.html" />
-        <option value="$PROJECT_DIR$/mapas/Templates/index.html" />
-        <option value="$PROJECT_DIR$/mapas/urls.py" />
-        <option value="$PROJECT_DIR$/pages/index.html" />
-        <option value="$PROJECT_DIR$/pages/views.py" />
-        <option value="$PROJECT_DIR$/templates/styles.css" />
-        <option value="$PROJECT_DIR$/templates/index.html" />
-        <option value="$PROJECT_DIR$/mapas/static/css/styles.css" />
-        <option value="$PROJECT_DIR$/mapas/templates/base.html" />
-        <option value="$PROJECT_DIR$/mapas/static/scripts/script.js" />
-        <option value="$PROJECT_DIR$/mapas/templates/index.html" />
-        <option value="$PROJECT_DIR$/Frontend/mapas/src/index.js" />
-        <option value="$PROJECT_DIR$/Frontend/mapas/public/index.html" />
-        <option value="$PROJECT_DIR$/Frontend/mapas/src/App.js" />
-        <option value="$PROJECT_DIR$/Frontend/mapas/src/containers/Layout.js" />
-        <option value="$PROJECT_DIR$/mapas/templates/hello_django.html" />
-        <option value="$PROJECT_DIR$/SF/settings.py" />
-        <option value="$PROJECT_DIR$/mapas/admin.py" />
-        <option value="$PROJECT_DIR$/mapas/models.py" />
-        <option value="$PROJECT_DIR$/mapas/serializers.py" />
-        <option value="$PROJECT_DIR$/SF/urls.py" />
-        <option value="$PROJECT_DIR$/mapas/views.py" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="67" />
-    <option name="y" value="25" />
-    <option name="width" value="1074" />
-    <option name="height" value="1055" />
-  </component>
+  <component name="ProjectId" id="1OVahGdMuCGr9T7INFESxK5iZLJ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="Scope">
-        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
-          <expand>
-            <path>
-              <item name="SF" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-            </path>
-            <path>
-              <item name="SF" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="pages" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="SF" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SF" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SF" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SF" type="462c0819:PsiDirectoryNode" />
-              <item name="mapas" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SF" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SF" type="462c0819:PsiDirectoryNode" />
-              <item name="SF" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
-  </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../api_frete/bin/api_frete" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/pontosMultidrogas" />
       <recent name="$PROJECT_DIR$/mapas" />
       <recent name="$PROJECT_DIR$/pages/static/css" />
       <recent name="$PROJECT_DIR$/pages" />
@@ -192,27 +72,18 @@
     </task>
     <servers />
   </component>
-  <component name="ToolWindowManager">
-    <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
-    <layout>
-      <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="1" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="2" visible="true" weight="0.07704918" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32937366" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.22462203" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Python Console" order="10" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -223,100 +94,5 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="28" lean-forward="true" selection-start-column="28" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mapas/migrations/urls.py" />
-    <entry file="file://$PROJECT_DIR$/mapas/Pages/index.html" />
-    <entry file="file://$PROJECT_DIR$/mapas/Templates/index.html" />
-    <entry file="file://$PROJECT_DIR$/mapas/migrations/0002_empresas_local.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SF/wsgi.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SF/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mapas/urls.py" />
-    <entry file="file://$PROJECT_DIR$/pages/index.html" />
-    <entry file="file://$PROJECT_DIR$/pages/static/css/style.css" />
-    <entry file="file://$PROJECT_DIR$/pages/models.py" />
-    <entry file="file://$PROJECT_DIR$/pages/admin.py" />
-    <entry file="file://$PROJECT_DIR$/pages/views.py" />
-    <entry file="file://$PROJECT_DIR$/mapas/static/css/styles.css" />
-    <entry file="file://$PROJECT_DIR$/mapas/static/scripts/script.js" />
-    <entry file="file://$PROJECT_DIR$/models.py" />
-    <entry file="file://$PROJECT_DIR$/Frontend/mapas/src/index.css" />
-    <entry file="file://$PROJECT_DIR$/Frontend/mapas/src/serviceWorker.js" />
-    <entry file="file://$PROJECT_DIR$/Frontend/mapas/src/App.test.js" />
-    <entry file="file://$PROJECT_DIR$/Frontend/mapas/public/index.html" />
-    <entry file="file://$PROJECT_DIR$/Frontend/mapas/package.json" />
-    <entry file="file://$PROJECT_DIR$/mapas/templates/index.html" />
-    <entry file="file://$PROJECT_DIR$/mapas/templates/base.html" />
-    <entry file="file://$PROJECT_DIR$/Frontend/mapas/src/App.js" />
-    <entry file="file://$PROJECT_DIR$/Frontend/mapas/src/index.js" />
-    <entry file="file://$PROJECT_DIR$/Frontend/mapas/src/containers/Layout.js" />
-    <entry file="file://$PROJECT_DIR$/mapas/templates/hello_django.html" />
-    <entry file="file://$PROJECT_DIR$/manage.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SF/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="113" column="6" lean-forward="true" selection-start-line="113" selection-start-column="6" selection-end-line="113" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mapas/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="32" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mapas/serializers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="76" selection-start-line="1" selection-start-column="76" selection-end-line="1" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SF/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="22" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mapas/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-162">
-          <caret line="68" column="8" selection-start-line="68" selection-start-column="8" selection-end-line="68" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mapas/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="39" column="17" lean-forward="true" selection-start-line="39" selection-start-column="17" selection-end-line="39" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#48#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
   </component>
 </project>

@@ -15,7 +15,6 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
@@ -26,7 +25,6 @@ SECRET_KEY = 'w19iigt9t7g4ofua)mxg!a#&96yjp!0^j&b2fir@f$53s=*o*^'
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
 
 # Application definition
 
@@ -40,11 +38,20 @@ INSTALLED_APPS = [
     'django.contrib.gis',
     'django_extensions',
     'rest_framework',
-    'corsheaders',
+    'pontosMultidrogas',
     'mapas',
     'material',
     'material.frontend',
+    'leaflet',
+    'djgeojson',
 ]
+
+LEAFLET_CONFIG = {
+    'DEFAULT_CENTER': (-22.7287198, -48.2827229),
+    'DEFAULT_ZOOM': 8,
+    'MIN_ZOOM': 3,
+    'MAX_ZOOM': 18,
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -75,8 +82,18 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'SF.wsgi.application'
+"""
+'OPTIONS': {
+    'options': '-c search_path=rede'
+},
+'NAME': 'cas-rede-multidrogas',
+'USER': 'postgres',
+'PASSWORD': 'C@sbrasil2019',
+'HOST': '127.0.0.1',
+'PORT': '5432',
+"""
 
+WSGI_APPLICATION = 'SF.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
@@ -86,7 +103,7 @@ DATABASES = {
         'ENGINE': 'django.contrib.gis.db.backends.postgis',
         'OPTIONS': {
             'options': '-c search_path=dados_ibge,public,poi'
-            },
+        },
         'NAME': 'mapas',
         'USER': 'georgia',
         'PASSWORD': 'geomeridium123',
@@ -94,7 +111,6 @@ DATABASES = {
         'PORT': '5432',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators
@@ -114,7 +130,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/2.1/topics/i18n/
 
@@ -127,7 +142,6 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/

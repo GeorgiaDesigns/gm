@@ -1,0 +1,29 @@
+{% load leaflet_tags %}
+{% load geojson_tags %}
+<html>
+  <head>
+    {% leaflet_js %}
+    {% leaflet_css %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+      .leaflet-container { height: 90%; }
+    </style>
+  </head>
+  <body>
+    <h1>Multidrogas</h1>
+     {% leaflet_map "main" callback="func" %}
+
+
+    <script type="text/javascript">
+      function func(map, options){
+        var dataurl = {% url "data" %};
+        $.getJSON(dataurl, function(data){
+            console.log({{dataurl|geojsonfeature|safe}});
+            L.geoJson().addTo(map);
+          L.geoJson(data).addTo(map);
+        })
+      }
+    </script>
+
+  </body>
+</html>
