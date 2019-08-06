@@ -1,17 +1,34 @@
 from django.contrib.gis.geos import GEOSGeometry
+from django.core.serializers import serialize
 from django.db import connection
 from django.http import HttpResponse
+from django.views.generic import TemplateView
 from rest_framework.views import APIView
 
 from pontosMultidrogas.models import FarmasMulti
 from pontosMultidrogas.serializers import FarmasMultiSerializer
 from rest_framework import generics
-from django.shortcuts import render
+from django.shortcuts import render, render_to_response
 import json
 
 
 def index(request):
-    return render(request, 'index.html')
+    cidade = request.GET.get('cidade')
+    template_name = 'index.html'
+    farmacias = serialize('geojson', FarmasMulti.objects.filter(nm_municip=cidade.upper()), geometry_field='geom',
+                          fields=('nm_municip',))
+    context = {
+        'farmacias': farmacias
+    }
+    print(context)
+    return render(request, template_name, context)
+
+
+def pontos(request):
+    cidade = request.GET.get('cidade')
+    farmacias = serialize('geojson', FarmasMulti.objects.filter(nm_municip=cidade.upper()), geometry_field='geom',
+                          fields=('nm_municip',))
+    return HttpResponse(farmacias, content_type='json')
 
 
 # def dms2latlng(value):
@@ -30,25 +47,22 @@ def index(request):
 #
 #     json.dump(geojson, open(geojson_file, 'wb'))
 
-def mapa(request):
-    template_name = 'index.html'
-    return render(request, template_name)
 
-
-class Lista_Multi(generics.ListCreateAPIView):
-    queryset = FarmasMulti.objects.all()
+class Lista_Multi(generics.ListAPIView):
     serializer_class = FarmasMultiSerializer
 
     def get_queryset(self):
-        qs = super().get_queryset()
-        cidade = self.request.query_params.get('cidade', None)
+        cidade = self.kwargs['cidade']
+        print(cidade)
+        return FarmasMulti.objects.all().filter(nm_municip=cidade.upper())
 
-        if cidade:
-            qs = FarmasMulti.objects.all().filter(nm_municip=cidade.upper())
 
-        return qs
+class MapaView(TemplateView):
+    template_name = 'index.html'
 
     def get_context_data(self, **kwargs):
-        ctx = super().get_context_data(**kwargs)
-        ctx['cidade'] = 'Campinas'
-        return ctx
+        context = super(MapaView, self).get_context_data(**kwargs)
+
+    def interesting_area(request, cidade):
+        farmacias = FarmasMulti.objects.filter(nm_municip=cidade.upper())
+        return render_to_response('index.html', {'farmacias': farmacias})

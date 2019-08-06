@@ -2,13 +2,14 @@ from django.conf.urls import url
 
 from . import views
 from pontosMultidrogas.models import FarmasMulti
-from pontosMultidrogas.views import Lista_Multi
+from pontosMultidrogas.views import Lista_Multi, index, pontos
 from django.views.generic import TemplateView
 from djgeojson.views import GeoJSONLayerView
 
 urlpatterns = [
-  url(r'^multi/', TemplateView.as_view(template_name='index.html'), name='index'),
-  url(r'^pontos/', Lista_Multi.as_view(), name='pontos'),
+  # url(r'^pontos/(?P<cidade>).+', Lista_Multi.as_view(), name='pontos'),
+  url(r'^test/', views.index, name="index"),
+  url(r'^pontos/', views.pontos, name="pontos"),
   url(r'^data/$',
-      GeoJSONLayerView.as_view(model=FarmasMulti), name='data')
+      GeoJSONLayerView.as_view(model=FarmasMulti, properties=('nm_municip',)), name='data')
 ]

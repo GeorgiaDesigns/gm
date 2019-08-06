@@ -46,6 +46,16 @@ fetch(dataurl)
     }
 
 
+
+      const pontos = {{ farmacias | safe }};
+      function func(map, options){
+        $.getJSON(pontos, function(data){
+          console.log({{data.geometry.geojson|safe}});
+          L.geoJson(data).addTo(map);
+        })
+      }
+
+
       window.addEventListener("map:init", function (e) {
           var detail = e.detail;
           L.marker([50.5, 30.5]).addTo(detail.map);
