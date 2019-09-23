@@ -1,11 +1,5 @@
 from rest_framework import serializers
-from mapas.models import Estados, SociodemografiaRmc, RestaurantesCampinas, FarmaciasRmc
-
-
-class EstadosSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Estados
-        fields = '__all__'
+from mapas.models import SociodemografiaRmc, RestaurantesCampinas,  RmcHoteis, FarmaMulti, FarmaciasRmc
 
 
 class RMC_Serializer(serializers.ModelSerializer):
@@ -17,7 +11,18 @@ class RMC_Serializer(serializers.ModelSerializer):
 class Restaurantes_Serializer(serializers.ModelSerializer):
     class Meta:
         model = RestaurantesCampinas
-        #
+        fields = '__all__'
+
+
+class Hoteis_Serializer(serializers.ModelSerializer):
+    class Meta:
+        model = RmcHoteis
+        fields = '__all__'
+
+
+class Multidrogas_Serializer(serializers.ModelSerializer):
+    class Meta:
+        model = FarmaMulti
         fields = '__all__'
 
 

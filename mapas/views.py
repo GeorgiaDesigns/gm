@@ -1,17 +1,18 @@
 from django.contrib.gis.geos import GEOSGeometry
 from django.db import connection
 from django.http import HttpResponse, JsonResponse
+from django.shortcuts import render
 from rest_framework.views import APIView
 
-from mapas.models import SociodemografiaRmc, RestaurantesCampinas, FarmaciasRmc
-from mapas.serializers import EstadosSerializer, RMC_Serializer, Restaurantes_Serializer, Farmacia_Serializer
+from mapas.models import SociodemografiaRmc, FarmaciasRmc, FarmaMulti, RmcHoteis, RestaurantesCampinas
+from mapas.serializers import RMC_Serializer, Farmacia_Serializer, Multidrogas_Serializer, Hoteis_Serializer, \
+    Restaurantes_Serializer
 from rest_framework import generics
 import geocoder
 import json
 
 
-def select_pois(request, camada, object):
-    # model = camada
+def select_pois(request, camada):
     queryset = camada.objects.all()
 
     variable_column = 'gid'
@@ -22,7 +23,7 @@ def select_pois(request, camada, object):
 
     pontos = camada.filter(**{filter1: search_string})
     # pontos da camada que caem dentro dos polígonos cujos gids foram recebidos no object
-    return pontos
+    return render(request)
 
 
 class Teste_RMC(generics.ListCreateAPIView):
@@ -56,22 +57,19 @@ class Teste_RMC(generics.ListCreateAPIView):
 
 
 class Lista_Farmacias(APIView):
-    def get(self, request):
+    def post(self, request):
         gids = self.request.GET.getlist('gid')
 
         if gids:
             with connection.cursor() as cursor:
-                for gid in gids:
-                    cursor.execute(
-                        "SELECT * FROM poi.farmacias_rmc f, dados_ibge.sociodemografia_rmc sd WHERE sd.gid IN"
-                        " (%s) AND ST_Intersects(sd.geom, f.geom) = true", [int(gid)])
-                    print(cursor)
-                    rows = cursor.fetchall()
+                cursor.execute("SELECT * FROM poi.farmacias_rmc f, dados_ibge.sociodemografia_rmc sd WHERE sd.gid IN"
+                               " %s AND ST_Intersects(sd.geom, f.geom) = true", [tuple(gids)])
+                rows = cursor.fetchall()
+
             result = []
             keys = ('gid', 'name',)
             for row in rows:
                 result.append(dict(zip(keys, row)))
-                print(result)
         json_data = json.dumps(result)
 
         return HttpResponse(json_data, content_type="application/json")

@@ -38,12 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.gis',
     'django_extensions',
     'rest_framework',
-    'pontosMultidrogas',
     'mapas',
-    'material',
-    'material.frontend',
-    'leaflet',
-    'djgeojson',
 ]
 
 LEAFLET_CONFIG = {
