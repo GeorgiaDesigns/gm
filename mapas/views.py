@@ -56,14 +56,17 @@ class Teste_RMC(generics.ListCreateAPIView):
         return qs
 
 
-class Lista_Farmacias(APIView):
+class Lista_POIs(APIView):
     def post(self, request):
+        layer = self.request.query_params.get('layer', None)
         gids = self.request.GET.getlist('gid')
 
         if gids:
+            stmt = (f"SELECT * FROM poi.{layer} f, dados_ibge.sociodemografia_rmc sd WHERE sd.gid IN"
+                    " %s AND ST_Intersects(sd.geom, f.geom) = true")
+
             with connection.cursor() as cursor:
-                cursor.execute("SELECT * FROM poi.farmacias_rmc f, dados_ibge.sociodemografia_rmc sd WHERE sd.gid IN"
-                               " %s AND ST_Intersects(sd.geom, f.geom) = true", [tuple(gids)])
+                cursor.execute(stmt, ([tuple(gids)]))
                 rows = cursor.fetchall()
 
             result = []

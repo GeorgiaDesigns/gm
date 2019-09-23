@@ -3,25 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e682e278-040a-4958-a6ec-6ba212a66708" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SF/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/SF/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SF/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/SF/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mapas/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/mapas/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mapas/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/mapas/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mapas/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/mapas/serializers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mapas/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mapas/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/npm-debug.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pontosMultidrogas/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pontosMultidrogas/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pontosMultidrogas/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pontosMultidrogas/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pontosMultidrogas/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pontosMultidrogas/serializers.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pontosMultidrogas/static/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pontosMultidrogas/static/scripts/script.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pontosMultidrogas/templates/buffer.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pontosMultidrogas/templates/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pontosMultidrogas/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pontosMultidrogas/views.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
